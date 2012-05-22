@@ -194,7 +194,7 @@ initEditChannel: function() {
 
 	// Update the channel slug preview when the title input is typed in.
 	$("#editChannelSheet input[name=title]").keyup(function() {
-		$("#channelSlug").val($(this).val().replace(/[^0-9a-z]/ig, "-").replace(/-+/, "-").replace(/^-+|-+$/g, "").toLowerCase());
+		$("#channelSlug").val($(this).val().replace(/-+/, "-").replace(/^-+|-+$/g, "").replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ|À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ|å/ig, "a").replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ|È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ|ë/ig, "e").replace(/ì|í|ị|ỉ|ĩ|Ì|Í|Ị|Ỉ|Ĩ|î/ig, "i").replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ|Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ|ø/ig, "o").replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ|Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ|ů|û/ig, "u").replace(/ỳ|ý|ỵ|ỷ|ỹ|Ỳ|Ý|Ỵ|Ỷ|Ỹ/ig, "y").replace(/đ|Đ/ig, "d").replace(/ç/ig, "c").replace(/ñ/ig, "n").replace(/ä|æ/ig, "ae").replace(/ö/ig, "oe").replace(/ü/ig, "ue").replace(/Ä/ig, "Ae").replace(/Ü/ig, "Ue").replace(/Ö/ig, "Oe").replace(/ß/ig, "ss").replace(/[^0-9a-z]/ig, "-").toLowerCase());
 	});
 
 	// Allow the user to select a channel to import permissions from.
