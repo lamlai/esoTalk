@@ -357,6 +357,8 @@ function isMobileBrowser()
  *
  * @param string $string The string to convert.
  * @return string The slug.
+ *
+ * @package esoTalk // edit by lamdesign.vn
  */
 function slug($string)
 {
@@ -369,21 +371,6 @@ function slug($string)
 	$slug = strtolower(trim(preg_replace(array("/[^0-9a-z]/i", "/-+/"), "-", $slug), "-"));
 
 	return substr($slug, 0, 63);
-}
-
-
-/**
- * Generate a salt of $numOfChars characters long containing random letters, numbers, and symbols.
- *
- * @param int $numOfChars The length of the random string.
- * @return string The random string.
- */
-function generateRandomString($numOfChars)
-{
-	$possibleChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890~!@#%^&*()_+=-{}[]:;<,>.?/`";
-	$salt = "";
-	for ($i = 0; $i < $numOfChars; $i++) $salt .= $possibleChars[rand(0, strlen($possibleChars) - 1)];
-	return $salt;
 }
 
 
